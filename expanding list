@@ -1,0 +1,12 @@
+def expanding(a):
+    c = 0
+    for i in range(0,len(a)-2):
+        absd = abs(a[i]-a[i+1])
+        absd2 = abs(a[i+1]-a[i+2])
+        if absd2>absd:
+            c = c + 1
+    if c == (len(a)//2 )+ 1:
+        return True
+    else:
+        return False
+print(expanding(list(map(int,input().split(" ")))))
